@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Questions and Answer</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Ai question and answer
+        </h1>
+        <p>
+            Aak a question, get an AI-Powered answer Instantly
+        </p>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="questionInput" placeholder="Ask a question about AI...">
+        <button onclick="generateAnswer">Ask AI</button>
+    </div>
+</body>
+</html>
+
+<script>
+function generateAnswer(){
+    const userQusestion = document.getElementById("questionInput").value;
+
+    if (userQusestion.trim() ===""){
+        alert("Please enter a question!");
+        return;
+    }
+
+    const  response = {
+        "What is AI?": "AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are programmed to think and learn like humans.",
+        "How does AI work?": "AI works by processing large amounts of 
+    return response[question] || "Sorry, I don't have an andata and recognizing patterns to make decisions or predictions. It uses algorithms and models to learn from data and improve its performance over time.",
+        "What are the applications of AI?": "AI has a wide range of applications, including natural language processing, computer vision, autonomous vehicles, healthcare, finance, and many more.",
+
+        "Hello" : "Hello! How can I assist you today?",
+        "How are you?" : "I'm just a computer program, so I don't have feelings, but I'm here to help you with any questions you have!",
+    };
+    return response [question] || "Sorry, I don't have an answer for that question.";
+}
+
+
+</script>
