@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Liddy Jewelry</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf7f2;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:2rem;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    gap:22px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-size:0.95rem;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#c79a63;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url('https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1200&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    max-width:600px;
+    margin:auto;
+    font-size:1rem;
+    line-height:1.7;
+    opacity:0.9;
+}
+
+.hero button{
+    margin-top:30px;
+    padding:14px 32px;
+    border:none;
+    background:#d8ab74;
+    color:white;
+    font-size:1rem;
+    border-radius:40px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#b8864f;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* PRODUCTS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.07);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:8px;
+    font-size:1.2rem;
+}
+
+.price{
+    color:#c79a63;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.card-content button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#111;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card-content button:hover{
+    background:#c79a63;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:25px;
+    height:500px;
+    object-fit:cover;
+}
+
+.about-text h2{
+    font-size:3rem;
+    margin-bottom:20px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.about-text p{
+    line-height:1.9;
+    color:#555;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+footer p{
+    opacity:0.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav ul{
+        gap:14px;
+    }
+
+    nav ul li a{
+        font-size:0.85rem;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .about img{
+        height:350px;
+    }
+
+    .section-title h2{
+        font-size:2.4rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">LIDDY</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Elegant Jewelry Collection</h1>
+
+        <p>
+            Timeless luxury crafted with elegance and beauty.
+            Discover rings, necklaces, and bracelets designed
+            to make every moment shine.
+        </p>
+
+        <button onclick="shopNow()">Shop Now</button>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="shop">
+
+    <div class="section-title">
+        <h2>Best Sellers</h2>
+        <p>Luxury pieces made with love ✨</p>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=800&auto=format&fit=crop">
+
+            <div class="card-content">
+                <h3>Golden Necklace</h3>
+                <div class="price">$120</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1603974372039-adc49044b6bd?q=80&w=800&auto=format&fit=crop">
+
+            <div class="card-content">
+                <h3>Diamond Ring</h3>
+                <div class="price">$180</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=800&auto=format&fit=crop">
+
+            <div class="card-content">
+                <h3>Luxury Bracelet</h3>
+                <div class="price">$95</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800&auto=format&fit=crop">
+
+            <div class="card-content">
+                <h3>Pearl Earrings</h3>
+                <div class="price">$75</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+    <div class="about">
+
+        <img src="https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="about-text">
+            <h2>About Our Brand</h2>
+
+            <p>
+                Luna Jewelry creates aesthetic and elegant pieces
+                inspired by timeless beauty. Every design is carefully
+                crafted to bring confidence, softness, and luxury
+                into your everyday style.
+                <br><br>
+                We believe jewelry is not just an accessory —
+                it is a memory you wear forever.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 Luna Jewelry — Crafted with Elegance ✨</p>
+</footer>
+
+<script>
+
+function shopNow(){
+    document.getElementById("shop")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+const buttons = document.querySelectorAll(".card button");
+
+buttons.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        btn.innerText = "Added ✓";
+
+        setTimeout(()=>{
+            btn.innerText = "Add to Cart";
+        },2000);
+    });
+});
+
+</script>
+
+</body>
+</html>
