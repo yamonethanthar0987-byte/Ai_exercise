@@ -48,7 +48,7 @@
         button:hover{
             background-color: #004d40;
         }
-        input{
+        input{bb
             width: 90px;
             padding: 10px;
             margin: 10px 0;
@@ -76,31 +76,36 @@
     </header>
     <div class="search-bar">
         <input type="text" id="questionInput" placeholder="Ask a question about AI...">
-        <button onclick="generateAnswer">Ask AI</button>
+        <button onclick="generateAnswer()">Ask AI</button>
     </div>
+    <div id="answer" style="margin-top: 20px; font-size: 1.2em;"></div>
 </body>
 </html>
 
 <script>
 function generateAnswer(){
-    const userQusestion = document.getElementById("questionInput").value;
+    const userQuestion = document.getElementById("questionInput").value.trim();
 
-    if (userQusestion.trim() ===""){
+    if (userQuestion === ""){
         alert("Please enter a question!");
         return;
     }
 
-    const  response = {
+    const responses = {
         "What is AI?": "AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are programmed to think and learn like humans.",
-        "How does AI work?": "AI works by processing large amounts of 
-    return response[question] || "Sorry, I don't have an andata and recognizing patterns to make decisions or predictions. It uses algorithms and models to learn from data and improve its performance over time.",
+        "How does AI work?": "AI works by processing large amounts of data and recognizing patterns to make decisions or predictions. It uses algorithms and models to learn from data and improve its performance over time.",
         "What are the applications of AI?": "AI has a wide range of applications, including natural language processing, computer vision, autonomous vehicles, healthcare, finance, and many more.",
+        "Hello": "Hello! How can I assist you today?",
+        "How are you?": "I'm just a computer program, so I don't have feelings, but I'm here to help you with any questions you have!",
+        "Who is Zul?" : "The boy whose silence can still comfort me more than loud promises from others. The one whose hands once held mine so gently that I still remember the warmth. He is not perfect, but somehow my heart learned him like a favorite song. The boy behind my softest smiles, my deepest thoughts, and the memories I replay at midnight.",
+        "Who is Wanna?" : "He is a freaky guy.",
+        "Who is Ricky?" : "He is gay.",
+        "Who is Ethan?" : "He is a son of bitch. He loves to watch bdsm or gay porn",
+        "Who is Liddy?" : "She is a beautiful girl. She is also very kind and caring. She is the best person I know."
 
-        "Hello" : "Hello! How can I assist you today?",
-        "How are you?" : "I'm just a computer program, so I don't have feelings, but I'm here to help you with any questions you have!",
     };
-    return response [question] || "Sorry, I don't have an answer for that question.";
+
+    const answer = responses[userQuestion] || "Sorry, I don't have an answer for that question.";
+    document.getElementById("answer").innerText = answer;
 }
-
-
 </script>
